@@ -1,0 +1,135 @@
+{
+  "image_name": "65fed1feae0247cabd2e303ee6c56c19.png",
+  "reviewed_by": "Annotator-1",
+  "timestamp": "2026-03-02T22:04:31.605090",
+  "annotations": [
+    {
+      "label": "Dog",
+      "x": 291,
+      "y": 705,
+      "width": 335,
+      "height": 230,
+      "confidence": 0.9212
+    },
+    {
+      "label": "Car",
+      "x": 524,
+      "y": 427,
+      "width": 448,
+      "height": 280,
+      "confidence": 0.9168
+    },
+    {
+      "label": "Person",
+      "x": 172,
+      "y": 300,
+      "width": 247,
+      "height": 615,
+      "confidence": 0.9078
+    },
+    {
+      "label": "Person",
+      "x": 1096,
+      "y": 379,
+      "width": 287,
+      "height": 551,
+      "confidence": 0.9065
+    },
+    {
+      "label": "Car",
+      "x": 1057,
+      "y": 447,
+      "width": 79,
+      "height": 70,
+      "confidence": 0.752
+    },
+    {
+      "label": "Potted Plant",
+      "x": 0,
+      "y": 456,
+      "width": 106,
+      "height": 216,
+      "confidence": 0.7455
+    },
+    {
+      "label": "Potted Plant",
+      "x": 1413,
+      "y": 487,
+      "width": 122,
+      "height": 190,
+      "confidence": 0.7255
+    },
+    {
+      "label": "Car",
+      "x": 908,
+      "y": 444,
+      "width": 64,
+      "height": 57,
+      "confidence": 0.655
+    },
+    {
+      "label": "Person",
+      "x": 1353,
+      "y": 447,
+      "width": 65,
+      "height": 149,
+      "confidence": 0.6085
+    },
+    {
+      "label": "Handbag",
+      "x": 1202,
+      "y": 488,
+      "width": 119,
+      "height": 206,
+      "confidence": 0.5546
+    },
+    {
+      "label": "Car",
+      "x": 975,
+      "y": 455,
+      "width": 43,
+      "height": 41,
+      "confidence": 0.4864
+    },
+    {
+      "label": "Person",
+      "x": 398,
+      "y": 453,
+      "width": 46,
+      "height": 113,
+      "confidence": 0.3519
+    },
+    {
+      "label": "Handbag",
+      "x": 1212,
+      "y": 540,
+      "width": 108,
+      "height": 152,
+      "confidence": 0.3107
+    },
+    {
+      "label": "Person",
+      "x": 459,
+      "y": 455,
+      "width": 36,
+      "height": 102,
+      "confidence": 0.3083
+    },
+    {
+      "label": "Person",
+      "x": 1257,
+      "y": 451,
+      "width": 106,
+      "height": 137,
+      "confidence": 0.2939
+    },
+    {
+      "label": "Person",
+      "x": 514,
+      "y": 446,
+      "width": 60,
+      "height": 109,
+      "confidence": 0.268
+    }
+  ]
+}

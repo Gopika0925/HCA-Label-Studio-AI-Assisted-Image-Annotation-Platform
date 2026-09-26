@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HCA Label Studio — Human-in-the-Loop Image Labeller</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+  <meta name="description"
+    content="AI-assisted image annotation tool with human-in-the-loop correction, bounding box editing, and MySQL storage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <!-- ════════════════════════════════════════════════════════ SIDEBAR ══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">🏷️</span>
+      <span class="logo-text">HCA Label</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="nav-item active" id="nav-label" onclick="showPanel('label')">
+        <span class="nav-icon">🖼️</span> Labeller
+      </a>
+      <a class="nav-item" id="nav-gallery" onclick="showPanel('gallery')">
+        <span class="nav-icon">📂</span> Annotations
+      </a>
+      <a class="nav-item" id="nav-retrain" onclick="showPanel('retrain')">
+        <span class="nav-icon">🔄</span> Retrain
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-dot" id="statusDot"></div>
+      <span id="statusText">Connecting…</span>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════ MAIN ══════ -->
+  <main class="main-content">
+
+    <!-- ─── HEADER ───────────────────────────────────────────────────── -->
+    <header class="page-header">
+      <div class="header-left">
+        <h1 class="page-title">Image Labeller</h1>
+        <span class="page-subtitle">Human-in-the-Loop · AI-Assisted Annotation</span>
+      </div>
+      <div class="header-right">
+        <div class="user-badge">
+          <span class="user-avatar">👤</span>
+          <input id="reviewerInput" class="reviewer-input" type="text" placeholder="Your name…" value="Annotator-1" />
+        </div>
+      </div>
+    </header>
+
+    <!-- ─── LABELLER PANEL ─────────────────────────────────────────── -->
+    <section id="panel-label" class="panel active">
+
+      <!-- Upload Zone -->
+      <div class="card upload-card" id="uploadZone">
+        <div class="upload-inner" id="uploadInner">
+          <div class="upload-icon">📤</div>
+          <h2 class="upload-heading">Drop images here or click to browse</h2>
+          <p class="upload-hint">Supports: PNG, JPG, JPEG, GIF, BMP, WEBP</p>
+          <input type="file" id="imageInput" accept="image/*" multiple hidden />
+          <button class="btn btn-primary" id="browseBtn" onclick="document.getElementById('imageInput').click()">
+            Choose Image
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Workspace -->
+      <div class="workspace" id="workspace" style="display:none">
+
+        <!-- Canvas Column -->
+        <div class="canvas-column">
+          <div class="card canvas-card">
+            <div class="card-header">
+              <span class="card-title">Canvas</span>
+              <div class="canvas-toolbar">
+                <button class="tool-btn active" id="toolSelect" title="Select/Move"
+                  onclick="setTool('select')">✋</button>
+                <button class="tool-btn" id="toolDraw" title="Draw Box" onclick="setTool('draw')">✏️</button>
+                <button class="tool-btn danger" id="toolDelete" title="Delete selected"
+                  onclick="deleteSelected()">🗑️</button>
+              </div>
+            </div>
+            <div class="canvas-wrapper" id="canvasWrapper">
+              <canvas id="annotationCanvas"></canvas>
+            </div>
+            <div class="canvas-footer">
+              <span id="canvasInfo" class="canvas-info">Upload an image to begin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls Column -->
+        <div class="controls-column">
+
+          <!-- Multi-Object Detections Card -->
+          <div class="card prediction-card" id="predictionCard">
+            <div class="card-header">
+              <span class="card-title">🤖 AI Detections</span>
+              <span class="badge" id="confBadge">—</span>
+            </div>
+            <div id="detectionsListUI" style="max-height:220px;overflow-y:auto;margin-bottom:10px">
+              <p class="editor-hint">Upload an image to see detections.</p>
+            </div>
+            <button class="btn btn-secondary full-width" id="predictBtn" onclick="predictImage()">
+              ⚡ Re-detect
+            </button>
+          </div>
+
+          <!-- Box Editor Card -->
+          <div class="card editor-card" id="editorCard">
+            <div class="card-header">
+              <span class="card-title">✏️ Edit Selected Box</span>
+            </div>
+            <div class="editor-body" id="editorBody">
+              <p class="editor-hint">Select a bounding box on the canvas to edit it here.</p>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="card actions-card">
+            <button class="btn btn-success full-width" id="saveBtn" onclick="saveAnnotation()">
+              💾 Confirm &amp; Save
+            </button>
+            <button class="btn btn-outline full-width mt-8" onclick="clearWorkspace()">
+              🗑️ Clear All
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Annotations List -->
+      <div class="card ann-list-card" id="annListCard" style="display:none">
+        <div class="card-header">
+          <span class="card-title">📋 Annotations on this image</span>
+          <span class="badge" id="annCount">0</span>
+        </div>
+        <div id="annListBody"></div>
+      </div>
+
+    </section>
+
+    <!-- ─── ANNOTATIONS GALLERY PANEL ─────────────────────────────── -->
+    <section id="panel-gallery" class="panel">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">📂 Saved Annotations</span>
+          <button class="btn btn-small btn-secondary" onclick="loadGallery()">🔄 Refresh</button>
+        </div>
+        <div id="galleryBody">
+          <p class="empty-state">No annotations yet. Start labelling to see them here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── RETRAIN PANEL ─────────────────────────────────────────── -->
+    <section id="panel-retrain" class="panel">
+      <div class="card retrain-card">
+        <div class="retrain-hero">
+          <div class="retrain-icon">🧠</div>
+          <h2 class="retrain-title">Retrain the Model</h2>
+          <p class="retrain-desc">
+            Uses all saved annotations as labelled ground truth to simulate a
+            fine-tuning cycle. In production this would kick off a real training job.
+          </p>
+          <button class="btn btn-primary btn-large" id="retrainBtn" onclick="retrainModel()">
+            🔄 Start Retraining
+          </button>
+        </div>
+        <div id="retrainResult" class="retrain-result" style="display:none"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════ TOAST ════════ -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- ═══════════════════════════════════════════════════ LOADER ═══════ -->
+  <div id="loader" class="loader-overlay" style="display:none">
+    <div class="loader-spinner"></div>
+    <div class="loader-text" id="loaderText">Processing…</div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

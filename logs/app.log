@@ -1,0 +1,204 @@
+2026-03-02 21:10:28,197 [INFO] Loading MobileNetV2 model …
+2026-03-02 21:10:28,197 [WARNING] TensorFlow not installed. Using dummy predictions.
+2026-03-02 21:10:32,362 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-02 21:10:32,362 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-02 21:10:32,445 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.103:5000
+2026-03-02 21:10:32,445 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-02 21:10:32,446 [INFO]  * Restarting with stat
+2026-03-02 21:10:32,762 [INFO] Loading MobileNetV2 model …
+2026-03-02 21:10:32,763 [WARNING] TensorFlow not installed. Using dummy predictions.
+2026-03-02 21:10:36,893 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-02 21:10:36,893 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-02 21:10:36,907 [WARNING]  * Debugger is active!
+2026-03-02 21:10:36,911 [INFO]  * Debugger PIN: 135-045-786
+2026-03-02 21:11:57,567 [INFO] 127.0.0.1 - - [02/Mar/2026 21:11:57] "GET / HTTP/1.1" 200 -
+2026-03-02 21:11:57,680 [INFO] 127.0.0.1 - - [02/Mar/2026 21:11:57] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-02 21:11:57,816 [INFO] 127.0.0.1 - - [02/Mar/2026 21:11:57] "GET /static/script.js HTTP/1.1" 200 -
+2026-03-02 21:11:58,132 [INFO] 127.0.0.1 - - [02/Mar/2026 21:11:58] "GET /health HTTP/1.1" 200 -
+2026-03-02 21:11:58,137 [INFO] 127.0.0.1 - - [02/Mar/2026 21:11:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-02 21:13:17,636 [INFO] 127.0.0.1 - - [02/Mar/2026 21:13:17] "GET / HTTP/1.1" 200 -
+2026-03-02 21:13:17,668 [INFO] 127.0.0.1 - - [02/Mar/2026 21:13:17] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-02 21:13:17,903 [INFO] 127.0.0.1 - - [02/Mar/2026 21:13:17] "GET /static/script.js HTTP/1.1" 200 -
+2026-03-02 21:13:17,954 [INFO] 127.0.0.1 - - [02/Mar/2026 21:13:17] "GET /health HTTP/1.1" 200 -
+2026-03-02 21:13:18,224 [INFO] 127.0.0.1 - - [02/Mar/2026 21:13:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-02 21:16:26,073 [INFO] Image saved: a191de5667924204bb26cb59820a7f1f.jpeg
+2026-03-02 21:16:26,073 [WARNING] Prediction fallback triggered: Model not available
+2026-03-02 21:16:26,930 [INFO] Prediction for a191de5667924204bb26cb59820a7f1f.jpeg: {'label': np.str_('Bird'), 'confidence': 0.795, 'bbox': {'x': 72, 'y': 58, 'width': 162, 'height': 159}}
+2026-03-02 21:16:26,932 [INFO] 127.0.0.1 - - [02/Mar/2026 21:16:26] "POST /upload HTTP/1.1" 200 -
+2026-03-02 21:16:26,954 [INFO] 127.0.0.1 - - [02/Mar/2026 21:16:26] "GET /uploads/a191de5667924204bb26cb59820a7f1f.jpeg HTTP/1.1" 200 -
+2026-03-02 21:27:16,134 [INFO] 127.0.0.1 - - [02/Mar/2026 21:27:16] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+2026-03-02 21:28:59,211 [INFO] Image saved: 7e54f54fefbf4816974dd5c8ee46fba6.jpg
+2026-03-02 21:28:59,211 [WARNING] Prediction fallback triggered: Model not available
+2026-03-02 21:28:59,212 [INFO] Prediction for 7e54f54fefbf4816974dd5c8ee46fba6.jpg: {'label': np.str_('Dog'), 'confidence': 0.645, 'bbox': {'x': 49, 'y': 78, 'width': 161, 'height': 137}}
+2026-03-02 21:28:59,214 [INFO] 127.0.0.1 - - [02/Mar/2026 21:28:59] "POST /upload HTTP/1.1" 200 -
+2026-03-02 21:28:59,452 [INFO] 127.0.0.1 - - [02/Mar/2026 21:28:59] "GET /uploads/7e54f54fefbf4816974dd5c8ee46fba6.jpg HTTP/1.1" 200 -
+2026-03-02 21:29:33,233 [INFO] 127.0.0.1 - - [02/Mar/2026 21:29:33] "GET /annotations HTTP/1.1" 200 -
+2026-03-02 21:29:36,900 [INFO] 127.0.0.1 - - [02/Mar/2026 21:29:36] "GET /annotations HTTP/1.1" 200 -
+2026-03-02 21:31:04,373 [INFO] Image saved: 7d94504d4663406c961fd7b73850f283.jpg
+2026-03-02 21:31:04,373 [WARNING] Prediction fallback triggered: Model not available
+2026-03-02 21:31:04,374 [INFO] Prediction for 7d94504d4663406c961fd7b73850f283.jpg: {'label': np.str_('Cat'), 'confidence': 0.5815, 'bbox': {'x': 66, 'y': 79, 'width': 126, 'height': 107}}
+2026-03-02 21:31:04,377 [INFO] 127.0.0.1 - - [02/Mar/2026 21:31:04] "POST /upload HTTP/1.1" 200 -
+2026-03-02 21:31:04,636 [INFO] 127.0.0.1 - - [02/Mar/2026 21:31:04] "GET /uploads/7d94504d4663406c961fd7b73850f283.jpg HTTP/1.1" 200 -
+2026-03-02 21:37:45,550 [INFO] Image saved: 7ca5df955f5d4788a442156c124c9e15.jpg
+2026-03-02 21:37:45,552 [WARNING] Prediction fallback triggered: Model not available
+2026-03-02 21:37:45,554 [INFO] Prediction for 7ca5df955f5d4788a442156c124c9e15.jpg: {'label': np.str_('Chair'), 'confidence': 0.79, 'bbox': {'x': 75, 'y': 70, 'width': 174, 'height': 129}}
+2026-03-02 21:37:45,557 [INFO] 127.0.0.1 - - [02/Mar/2026 21:37:45] "POST /upload HTTP/1.1" 200 -
+2026-03-02 21:37:45,816 [INFO] 127.0.0.1 - - [02/Mar/2026 21:37:45] "GET /uploads/7ca5df955f5d4788a442156c124c9e15.jpg HTTP/1.1" 200 -
+2026-03-02 21:46:53,769 [INFO]  * Detected change in 'C:\\Users\\2004g\\OneDrive\\New folder 1\\mandan\\sarang sw\\hca\\app.py', reloading
+2026-03-02 21:46:53,861 [INFO]  * Restarting with stat
+2026-03-02 21:46:56,734 [INFO] Loading YOLOv8n model …
+2026-03-02 21:46:59,505 [INFO] YOLOv8n model loaded successfully.
+2026-03-02 21:47:03,587 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-02 21:47:03,587 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-02 21:47:03,601 [WARNING]  * Debugger is active!
+2026-03-02 21:47:03,605 [INFO]  * Debugger PIN: 135-045-786
+2026-03-02 21:48:58,853 [INFO] Loading YOLOv8n model …
+2026-03-02 21:48:58,878 [INFO] YOLOv8n model loaded successfully.
+2026-03-02 21:49:02,957 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-02 21:49:02,958 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-02 21:49:02,983 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.103:5000
+2026-03-02 21:49:02,983 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-02 21:49:02,984 [INFO]  * Restarting with stat
+2026-03-02 21:49:05,545 [INFO] Loading YOLOv8n model …
+2026-03-02 21:49:05,575 [INFO] YOLOv8n model loaded successfully.
+2026-03-02 21:49:09,616 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-02 21:49:09,617 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-02 21:49:09,629 [WARNING]  * Debugger is active!
+2026-03-02 21:49:09,632 [INFO]  * Debugger PIN: 135-045-786
+2026-03-02 21:49:47,590 [INFO] 127.0.0.1 - - [02/Mar/2026 21:49:47] "GET / HTTP/1.1" 200 -
+2026-03-02 21:49:47,693 [INFO] 127.0.0.1 - - [02/Mar/2026 21:49:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-02 21:49:47,838 [INFO] 127.0.0.1 - - [02/Mar/2026 21:49:47] "GET /static/script.js HTTP/1.1" 200 -
+2026-03-02 21:49:48,164 [INFO] 127.0.0.1 - - [02/Mar/2026 21:49:48] "GET /health HTTP/1.1" 200 -
+2026-03-02 21:51:46,720 [INFO] 127.0.0.1 - - [02/Mar/2026 21:51:46] "GET / HTTP/1.1" 200 -
+2026-03-02 21:51:46,778 [INFO] 127.0.0.1 - - [02/Mar/2026 21:51:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-02 21:51:46,964 [INFO] 127.0.0.1 - - [02/Mar/2026 21:51:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-03-02 21:51:47,351 [INFO] 127.0.0.1 - - [02/Mar/2026 21:51:47] "GET /health HTTP/1.1" 200 -
+2026-03-02 21:53:02,595 [INFO] 127.0.0.1 - - [02/Mar/2026 21:53:02] "GET / HTTP/1.1" 200 -
+2026-03-02 21:53:02,642 [INFO] 127.0.0.1 - - [02/Mar/2026 21:53:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-02 21:53:02,859 [INFO] 127.0.0.1 - - [02/Mar/2026 21:53:02] "GET /static/script.js HTTP/1.1" 200 -
+2026-03-02 21:53:02,920 [INFO] 127.0.0.1 - - [02/Mar/2026 21:53:02] "GET /health HTTP/1.1" 200 -
+2026-03-02 21:53:17,717 [INFO] Image saved: 3ae293d2950d4e6daf5dbe28122034f5.jpg
+2026-03-02 21:53:18,210 [INFO] YOLO detected 7 object(s): ['Person', 'Person', 'Dog', 'Person', 'Car', 'Person', 'Truck']
+2026-03-02 21:53:18,210 [INFO] Detections for 3ae293d2950d4e6daf5dbe28122034f5.jpg: 7 object(s)
+2026-03-02 21:53:18,211 [INFO] 127.0.0.1 - - [02/Mar/2026 21:53:18] "POST /upload HTTP/1.1" 200 -
+2026-03-02 21:53:18,535 [INFO] 127.0.0.1 - - [02/Mar/2026 21:53:18] "GET /uploads/3ae293d2950d4e6daf5dbe28122034f5.jpg HTTP/1.1" 200 -
+2026-03-02 22:03:40,251 [INFO] Image saved: 65fed1feae0247cabd2e303ee6c56c19.png
+2026-03-02 22:03:40,492 [INFO] YOLO detected 16 object(s): ['Dog', 'Car', 'Person', 'Person', 'Car', 'Potted Plant', 'Potted Plant', 'Car', 'Person', 'Handbag', 'Car', 'Person', 'Handbag', 'Person', 'Person', 'Person']
+2026-03-02 22:03:40,492 [INFO] Detections for 65fed1feae0247cabd2e303ee6c56c19.png: 16 object(s)
+2026-03-02 22:03:40,495 [INFO] 127.0.0.1 - - [02/Mar/2026 22:03:40] "POST /upload HTTP/1.1" 200 -
+2026-03-02 22:03:40,511 [INFO] 127.0.0.1 - - [02/Mar/2026 22:03:40] "GET /uploads/65fed1feae0247cabd2e303ee6c56c19.png HTTP/1.1" 200 -
+2026-03-02 22:04:22,664 [INFO] 127.0.0.1 - - [02/Mar/2026 22:04:22] "GET /annotations HTTP/1.1" 200 -
+2026-03-02 22:04:31,607 [INFO] Annotation JSON saved: C:\Users\2004g\OneDrive\New folder 1\mandan\sarang sw\hca\annotations\65fed1feae0247cabd2e303ee6c56c19.png.json
+2026-03-02 22:04:35,681 [WARNING] MySQL connection failed: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061). Annotations will be JSON-only.
+2026-03-02 22:04:35,682 [INFO] 127.0.0.1 - - [02/Mar/2026 22:04:35] "POST /save_annotation HTTP/1.1" 200 -
+2026-03-02 22:04:38,368 [INFO] 127.0.0.1 - - [02/Mar/2026 22:04:38] "GET /annotations HTTP/1.1" 200 -
+2026-03-02 22:04:44,225 [INFO] [RETRAIN] Simulating retraining on 1 annotation(s) …
+2026-03-02 22:04:45,229 [INFO] 127.0.0.1 - - [02/Mar/2026 22:04:45] "POST /retrain HTTP/1.1" 200 -
+2026-03-02 22:31:52,478 [INFO] 127.0.0.1 - - [02/Mar/2026 22:31:52] "GET /annotations HTTP/1.1" 200 -
+2026-03-03 11:38:53,464 [INFO] Loading YOLOv8n model …
+2026-03-03 11:38:53,538 [INFO] YOLOv8n model loaded successfully.
+2026-03-03 11:38:57,644 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-03 11:38:57,645 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-03 11:38:57,684 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.243.137.186:5000
+2026-03-03 11:38:57,685 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-03 11:38:57,687 [INFO]  * Restarting with stat
+2026-03-03 11:39:00,190 [INFO] Loading YOLOv8n model …
+2026-03-03 11:39:00,217 [INFO] YOLOv8n model loaded successfully.
+2026-03-03 11:39:04,328 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-03 11:39:04,328 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-03 11:39:04,336 [WARNING]  * Debugger is active!
+2026-03-03 11:39:04,339 [INFO]  * Debugger PIN: 135-045-786
+2026-03-03 11:39:12,948 [INFO] 127.0.0.1 - - [03/Mar/2026 11:39:12] "GET / HTTP/1.1" 200 -
+2026-03-03 11:39:13,027 [INFO] 127.0.0.1 - - [03/Mar/2026 11:39:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-03 11:39:13,196 [INFO] 127.0.0.1 - - [03/Mar/2026 11:39:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-03-03 11:39:13,537 [INFO] 127.0.0.1 - - [03/Mar/2026 11:39:13] "GET /health HTTP/1.1" 200 -
+2026-03-03 11:39:13,800 [INFO] 127.0.0.1 - - [03/Mar/2026 11:39:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-03 11:40:20,082 [INFO] 127.0.0.1 - - [03/Mar/2026 11:40:20] "GET / HTTP/1.1" 200 -
+2026-03-03 11:40:20,093 [INFO] 127.0.0.1 - - [03/Mar/2026 11:40:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-03 11:40:20,330 [INFO] 127.0.0.1 - - [03/Mar/2026 11:40:20] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-03-03 11:40:20,638 [INFO] 127.0.0.1 - - [03/Mar/2026 11:40:20] "GET /health HTTP/1.1" 200 -
+2026-03-03 11:56:46,062 [INFO] 127.0.0.1 - - [03/Mar/2026 11:56:46] "GET / HTTP/1.1" 200 -
+2026-03-03 11:56:46,122 [INFO] 127.0.0.1 - - [03/Mar/2026 11:56:46] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-03 11:56:46,248 [INFO] 127.0.0.1 - - [03/Mar/2026 11:56:46] "GET /static/script.js HTTP/1.1" 200 -
+2026-03-03 11:56:46,679 [INFO] 127.0.0.1 - - [03/Mar/2026 11:56:46] "GET /health HTTP/1.1" 200 -
+2026-03-03 12:02:50,721 [INFO] Image saved: 0ab2623cfd9a445abfacc1dce974eade.png
+2026-03-03 12:02:51,373 [INFO] YOLO detected 16 object(s): ['Dog', 'Car', 'Person', 'Person', 'Car', 'Potted Plant', 'Potted Plant', 'Car', 'Person', 'Handbag', 'Car', 'Person', 'Handbag', 'Person', 'Person', 'Person']
+2026-03-03 12:02:51,374 [INFO] Detections for 0ab2623cfd9a445abfacc1dce974eade.png: 16 object(s)
+2026-03-03 12:02:51,377 [INFO] 127.0.0.1 - - [03/Mar/2026 12:02:51] "POST /upload HTTP/1.1" 200 -
+2026-03-03 12:02:51,411 [INFO] 127.0.0.1 - - [03/Mar/2026 12:02:51] "GET /uploads/0ab2623cfd9a445abfacc1dce974eade.png HTTP/1.1" 200 -
+2026-03-04 08:42:52,560 [INFO] Loading YOLOv8n model …
+2026-03-04 08:42:52,617 [INFO] YOLOv8n model loaded successfully.
+2026-03-04 08:42:56,699 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-04 08:42:56,700 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-04 08:42:56,720 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.216.234.186:5000
+2026-03-04 08:42:56,721 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-04 08:42:56,723 [INFO]  * Restarting with stat
+2026-03-04 08:42:59,272 [INFO] Loading YOLOv8n model …
+2026-03-04 08:42:59,298 [INFO] YOLOv8n model loaded successfully.
+2026-03-04 08:43:03,389 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-03-04 08:43:03,390 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-03-04 08:43:03,403 [WARNING]  * Debugger is active!
+2026-03-04 08:43:03,408 [INFO]  * Debugger PIN: 135-045-786
+2026-03-04 08:43:23,684 [INFO] 127.0.0.1 - - [04/Mar/2026 08:43:23] "GET / HTTP/1.1" 200 -
+2026-03-04 08:43:23,796 [INFO] 127.0.0.1 - - [04/Mar/2026 08:43:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-04 08:43:23,934 [INFO] 127.0.0.1 - - [04/Mar/2026 08:43:23] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-03-04 08:43:24,010 [INFO] 127.0.0.1 - - [04/Mar/2026 08:43:24] "GET /health HTTP/1.1" 200 -
+2026-03-04 08:49:06,814 [INFO] Image saved: 216c2f50862e4eb2a0d160342a1b196d.png
+2026-03-04 08:49:08,021 [INFO] YOLO detected 16 object(s): ['Dog', 'Car', 'Person', 'Person', 'Car', 'Potted Plant', 'Potted Plant', 'Car', 'Person', 'Handbag', 'Car', 'Person', 'Handbag', 'Person', 'Person', 'Person']
+2026-03-04 08:49:08,023 [INFO] Detections for 216c2f50862e4eb2a0d160342a1b196d.png: 16 object(s)
+2026-03-04 08:49:08,028 [INFO] 127.0.0.1 - - [04/Mar/2026 08:49:08] "POST /upload HTTP/1.1" 200 -
+2026-03-04 08:49:08,052 [INFO] 127.0.0.1 - - [04/Mar/2026 08:49:08] "GET /uploads/216c2f50862e4eb2a0d160342a1b196d.png HTTP/1.1" 200 -
+2026-03-04 08:50:18,132 [INFO] 127.0.0.1 - - [04/Mar/2026 08:50:18] "GET /annotations HTTP/1.1" 200 -
+2026-09-26 23:01:54,275 [INFO] Loading YOLOv8n model …
+2026-09-26 23:01:54,381 [INFO] YOLOv8n model loaded successfully.
+2026-09-26 23:01:58,495 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-09-26 23:01:58,496 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-09-26 23:01:58,534 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2026-09-26 23:01:58,535 [INFO] [33mPress CTRL+C to quit[0m
+2026-09-26 23:01:58,538 [INFO]  * Restarting with stat
+2026-09-26 23:02:03,038 [INFO] Loading YOLOv8n model …
+2026-09-26 23:02:03,085 [INFO] YOLOv8n model loaded successfully.
+2026-09-26 23:02:07,184 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-09-26 23:02:07,185 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-09-26 23:02:07,194 [WARNING]  * Debugger is active!
+2026-09-26 23:02:07,200 [INFO]  * Debugger PIN: 135-045-786
+2026-09-26 23:36:04,499 [INFO] Loading YOLOv8n model …
+2026-09-26 23:36:04,574 [INFO] YOLOv8n model loaded successfully.
+2026-09-26 23:36:08,663 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-09-26 23:36:08,663 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-09-26 23:36:08,690 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2026-09-26 23:36:08,690 [INFO] [33mPress CTRL+C to quit[0m
+2026-09-26 23:36:08,692 [INFO]  * Restarting with stat
+2026-09-26 23:36:11,431 [INFO] Loading YOLOv8n model …
+2026-09-26 23:36:11,461 [INFO] YOLOv8n model loaded successfully.
+2026-09-26 23:36:15,499 [WARNING] DB init failed (MySQL may not be running): 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2026-09-26 23:36:15,499 [INFO] Starting HCA Label Tool server on http://localhost:5000
+2026-09-26 23:36:15,508 [WARNING]  * Debugger is active!
+2026-09-26 23:36:15,513 [INFO]  * Debugger PIN: 135-045-786
+2026-09-26 23:38:09,315 [INFO] 127.0.0.1 - - [26/Sep/2026 23:38:09] "GET / HTTP/1.1" 200 -
+2026-09-26 23:38:09,448 [INFO] 127.0.0.1 - - [26/Sep/2026 23:38:09] "GET /static/style.css HTTP/1.1" 200 -
+2026-09-26 23:38:09,459 [INFO] 127.0.0.1 - - [26/Sep/2026 23:38:09] "GET /static/script.js HTTP/1.1" 200 -
+2026-09-26 23:38:10,435 [INFO] 127.0.0.1 - - [26/Sep/2026 23:38:10] "GET /health HTTP/1.1" 200 -
+2026-09-26 23:40:31,440 [INFO] Image saved: 7d6419e9c50a490aadd2bdef9baba850.png
+2026-09-26 23:40:31,744 [INFO] YOLO detected 16 object(s): ['Dog', 'Car', 'Person', 'Person', 'Car', 'Potted Plant', 'Potted Plant', 'Car', 'Person', 'Handbag', 'Car', 'Person', 'Handbag', 'Person', 'Person', 'Person']
+2026-09-26 23:40:31,745 [INFO] Detections for 7d6419e9c50a490aadd2bdef9baba850.png: 16 object(s)
+2026-09-26 23:40:31,746 [INFO] 127.0.0.1 - - [26/Sep/2026 23:40:31] "POST /upload HTTP/1.1" 200 -
+2026-09-26 23:40:31,756 [INFO] 127.0.0.1 - - [26/Sep/2026 23:40:31] "GET /uploads/7d6419e9c50a490aadd2bdef9baba850.png HTTP/1.1" 200 -
